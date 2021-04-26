@@ -1,5 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
+import { Userlist } from "../userlist/Userlist";
+
+
 
 function Userform(){    //component,controller
     const [userform,setUserform]=useState({//useState-hook-predefined function
@@ -21,9 +24,10 @@ function Userform(){    //component,controller
         <div>
             <input value={userform.name} name='name' onChange={updateState}></input>
             <input value={userform.mobileNumber} name='mobileNumber' onChange={updateState} placeholder='Age'></input>
-            
             <button onClick={save}>Save</button>
+            <Userlist></Userlist>
         </div>
+    
     )
   
     function updateState(event){
