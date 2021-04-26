@@ -1,13 +1,12 @@
+export default function Userlist(props){
+   
 
-export default function Userlist(props) {
-
-    return (<ol>
-
-
-{props.userProps.map(function(user,index){
-            return<li>{user.name}</li>
-        })}
-
-    </ol>
-    );
+    return (
+        <ol>
+            {props.usersProp.map(function(user,index){
+                return <li>{user.name}</li>
+            })}
+            
+        </ol>
+    )
 }
